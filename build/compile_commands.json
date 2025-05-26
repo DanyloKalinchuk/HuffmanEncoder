@@ -1,0 +1,14 @@
+[
+{
+  "directory": "D:/c++ projects/huffman coding/build",
+  "command": "C:\\msys64\\ucrt64\\bin\\g++.exe   -g -std=gnu++17 -o CMakeFiles\\HuffmanEncoder.dir\\main.cpp.obj -c \"D:\\c++ projects\\huffman coding\\main.cpp\"",
+  "file": "D:/c++ projects/huffman coding/main.cpp",
+  "output": "CMakeFiles/HuffmanEncoder.dir/main.cpp.obj"
+},
+{
+  "directory": "D:/c++ projects/huffman coding/build",
+  "command": "C:\\msys64\\ucrt64\\bin\\g++.exe   -g -std=gnu++17 -o CMakeFiles\\HuffmanEncoder.dir\\huffmanEncoder.cpp.obj -c \"D:\\c++ projects\\huffman coding\\huffmanEncoder.cpp\"",
+  "file": "D:/c++ projects/huffman coding/huffmanEncoder.cpp",
+  "output": "CMakeFiles/HuffmanEncoder.dir/huffmanEncoder.cpp.obj"
+}
+]
