@@ -29,13 +29,18 @@ def get_path(event=None):
     else:
         lbl_output.config(text="Choose output directory")
 
+def decode(event=None):
+    filename = filedialog.askopenfilename(initialdir="/", title="Select a File", filetypes=(("Binary files", "*.bin*"),))
+    if filename:
+        print(filename)
+
 output_path = ""
 
 root = tk.Tk()
 root.title("Huffman Encoder")
-root.geometry("600x375")
+root.geometry("800x675")
 
-root.columnconfigure(0, weight=3)
+root.columnconfigure(0, weight=5)
 root.columnconfigure(1, weight=1)
 root.rowconfigure(0, weight=1)
 
@@ -48,7 +53,7 @@ txt_box = tk.Text(frame_input, font=('System 15'), height=12, width=12)
 txt_box.grid(row=0, column=0, sticky="ew", padx=5, pady=5)
 
 frame_btns = tk.Frame(root)
-frame_btns.grid(row=0, column=1, sticky="nsew")
+frame_btns.grid(row=0, column=1, sticky="nsew", padx=3, pady=3)
 
 frame_btns.columnconfigure(0, weight=1)
 
@@ -57,6 +62,9 @@ btn_from_txt.grid(row=0, column=0, sticky="new", padx=5, pady=6)
 
 btn_encode = tk.Button(frame_btns, text="Encode", command=encode, height=7)
 btn_encode.grid(row=1, column=0, sticky="new", padx=5, pady=6)
+
+btn_decode = tk.Button(frame_btns, text="Choose .bin file\n with encoded text", command=decode, height=5)
+btn_decode.grid(row=2, column=0, sticky="new", padx=5, pady=8)
 
 frame_output = tk.Frame(frame_input)
 frame_output.grid(row=1, column=0, sticky="nsew", padx=3, pady=3)
@@ -72,5 +80,12 @@ btn_output.grid(row=1, column=0, sticky="new")
 
 lbl_state = tk.Label(frame_output, text="")
 lbl_state.grid(row=2, column=0, sticky="new")
+
+lbl_decoding = tk.Label(frame_input, text="Decoded text")
+lbl_decoding.grid(row=2, column=0, sticky="new")
+
+txt_box_decoded = tk.Text(frame_input, font=('System 15'), height=12)
+txt_box_decoded.grid(row=3, column=0, sticky="new")
+
 
 root.mainloop()
