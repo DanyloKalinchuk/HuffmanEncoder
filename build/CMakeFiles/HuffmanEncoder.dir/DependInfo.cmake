@@ -8,8 +8,9 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "D:/c++ projects/huffman coding/huffmanEncoder.cpp" "CMakeFiles/HuffmanEncoder.dir/huffmanEncoder.cpp.obj" "gcc" "CMakeFiles/HuffmanEncoder.dir/huffmanEncoder.cpp.obj.d"
-  "D:/c++ projects/huffman coding/main.cpp" "CMakeFiles/HuffmanEncoder.dir/main.cpp.obj" "gcc" "CMakeFiles/HuffmanEncoder.dir/main.cpp.obj.d"
+  "D:/c++ projects/huffman coding/src/huffmanEncoder.cpp" "CMakeFiles/HuffmanEncoder.dir/src/huffmanEncoder.cpp.obj" "gcc" "CMakeFiles/HuffmanEncoder.dir/src/huffmanEncoder.cpp.obj.d"
+  "D:/c++ projects/huffman coding/src/main.cpp" "CMakeFiles/HuffmanEncoder.dir/src/main.cpp.obj" "gcc" "CMakeFiles/HuffmanEncoder.dir/src/main.cpp.obj.d"
+  "D:/c++ projects/huffman coding/src/readWriteFiles.cpp" "CMakeFiles/HuffmanEncoder.dir/src/readWriteFiles.cpp.obj" "gcc" "CMakeFiles/HuffmanEncoder.dir/src/readWriteFiles.cpp.obj.d"
   )
 
 # Targets to which this target links which contain Fortran sources.

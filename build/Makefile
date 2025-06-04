@@ -128,53 +128,77 @@ HuffmanEncoder/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\HuffmanEncoder.dir\build.make CMakeFiles/HuffmanEncoder.dir/build
 .PHONY : HuffmanEncoder/fast
 
-huffmanEncoder.obj: huffmanEncoder.cpp.obj
-.PHONY : huffmanEncoder.obj
+src/huffmanEncoder.obj: src/huffmanEncoder.cpp.obj
+.PHONY : src/huffmanEncoder.obj
 
 # target to build an object file
-huffmanEncoder.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\HuffmanEncoder.dir\build.make CMakeFiles/HuffmanEncoder.dir/huffmanEncoder.cpp.obj
-.PHONY : huffmanEncoder.cpp.obj
+src/huffmanEncoder.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\HuffmanEncoder.dir\build.make CMakeFiles/HuffmanEncoder.dir/src/huffmanEncoder.cpp.obj
+.PHONY : src/huffmanEncoder.cpp.obj
 
-huffmanEncoder.i: huffmanEncoder.cpp.i
-.PHONY : huffmanEncoder.i
+src/huffmanEncoder.i: src/huffmanEncoder.cpp.i
+.PHONY : src/huffmanEncoder.i
 
 # target to preprocess a source file
-huffmanEncoder.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\HuffmanEncoder.dir\build.make CMakeFiles/HuffmanEncoder.dir/huffmanEncoder.cpp.i
-.PHONY : huffmanEncoder.cpp.i
+src/huffmanEncoder.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\HuffmanEncoder.dir\build.make CMakeFiles/HuffmanEncoder.dir/src/huffmanEncoder.cpp.i
+.PHONY : src/huffmanEncoder.cpp.i
 
-huffmanEncoder.s: huffmanEncoder.cpp.s
-.PHONY : huffmanEncoder.s
+src/huffmanEncoder.s: src/huffmanEncoder.cpp.s
+.PHONY : src/huffmanEncoder.s
 
 # target to generate assembly for a file
-huffmanEncoder.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\HuffmanEncoder.dir\build.make CMakeFiles/HuffmanEncoder.dir/huffmanEncoder.cpp.s
-.PHONY : huffmanEncoder.cpp.s
+src/huffmanEncoder.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\HuffmanEncoder.dir\build.make CMakeFiles/HuffmanEncoder.dir/src/huffmanEncoder.cpp.s
+.PHONY : src/huffmanEncoder.cpp.s
 
-main.obj: main.cpp.obj
-.PHONY : main.obj
+src/main.obj: src/main.cpp.obj
+.PHONY : src/main.obj
 
 # target to build an object file
-main.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\HuffmanEncoder.dir\build.make CMakeFiles/HuffmanEncoder.dir/main.cpp.obj
-.PHONY : main.cpp.obj
+src/main.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\HuffmanEncoder.dir\build.make CMakeFiles/HuffmanEncoder.dir/src/main.cpp.obj
+.PHONY : src/main.cpp.obj
 
-main.i: main.cpp.i
-.PHONY : main.i
+src/main.i: src/main.cpp.i
+.PHONY : src/main.i
 
 # target to preprocess a source file
-main.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\HuffmanEncoder.dir\build.make CMakeFiles/HuffmanEncoder.dir/main.cpp.i
-.PHONY : main.cpp.i
+src/main.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\HuffmanEncoder.dir\build.make CMakeFiles/HuffmanEncoder.dir/src/main.cpp.i
+.PHONY : src/main.cpp.i
 
-main.s: main.cpp.s
-.PHONY : main.s
+src/main.s: src/main.cpp.s
+.PHONY : src/main.s
 
 # target to generate assembly for a file
-main.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\HuffmanEncoder.dir\build.make CMakeFiles/HuffmanEncoder.dir/main.cpp.s
-.PHONY : main.cpp.s
+src/main.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\HuffmanEncoder.dir\build.make CMakeFiles/HuffmanEncoder.dir/src/main.cpp.s
+.PHONY : src/main.cpp.s
+
+src/readWriteFiles.obj: src/readWriteFiles.cpp.obj
+.PHONY : src/readWriteFiles.obj
+
+# target to build an object file
+src/readWriteFiles.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\HuffmanEncoder.dir\build.make CMakeFiles/HuffmanEncoder.dir/src/readWriteFiles.cpp.obj
+.PHONY : src/readWriteFiles.cpp.obj
+
+src/readWriteFiles.i: src/readWriteFiles.cpp.i
+.PHONY : src/readWriteFiles.i
+
+# target to preprocess a source file
+src/readWriteFiles.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\HuffmanEncoder.dir\build.make CMakeFiles/HuffmanEncoder.dir/src/readWriteFiles.cpp.i
+.PHONY : src/readWriteFiles.cpp.i
+
+src/readWriteFiles.s: src/readWriteFiles.cpp.s
+.PHONY : src/readWriteFiles.s
+
+# target to generate assembly for a file
+src/readWriteFiles.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\HuffmanEncoder.dir\build.make CMakeFiles/HuffmanEncoder.dir/src/readWriteFiles.cpp.s
+.PHONY : src/readWriteFiles.cpp.s
 
 # Help Target
 help:
@@ -185,12 +209,15 @@ help:
 	@echo ... edit_cache
 	@echo ... rebuild_cache
 	@echo ... HuffmanEncoder
-	@echo ... huffmanEncoder.obj
-	@echo ... huffmanEncoder.i
-	@echo ... huffmanEncoder.s
-	@echo ... main.obj
-	@echo ... main.i
-	@echo ... main.s
+	@echo ... src/huffmanEncoder.obj
+	@echo ... src/huffmanEncoder.i
+	@echo ... src/huffmanEncoder.s
+	@echo ... src/main.obj
+	@echo ... src/main.i
+	@echo ... src/main.s
+	@echo ... src/readWriteFiles.obj
+	@echo ... src/readWriteFiles.i
+	@echo ... src/readWriteFiles.s
 .PHONY : help
 
 
