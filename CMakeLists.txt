@@ -5,7 +5,7 @@ project(HuffmanEncoder)
 set(CMAKE_CXX_STANDARD 17)
 
 add_executable(HuffmanEncoder
-    main.cpp 
-    huffmanEncoder.cpp
+    src/main.cpp 
+    src/huffmanEncoder.cpp
+    src/readWriteFiles.cpp
 )
-
