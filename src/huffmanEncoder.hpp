@@ -5,9 +5,7 @@
 #include <vector>
 #include <map>
 
-using namespace std;
-
-string decode_huffman(map<string, char>, string);
+std::string decode_huffman(std::map<std::string, char>, std::string);
 
 class Node{
     public:
@@ -26,27 +24,27 @@ class HuffmanTree{
     public:
         Node* root = nullptr;
 
-        void nodes_to_tree(vector<Node*>);
+        void nodes_to_tree(std::vector<Node*>);
 };
 
 class HuffmanEncoder{
     public:
-        string encode(string);
-        string get_original();
+        std::string encode(std::string);
+        std::string get_original();
 
-        string get_encoded_text();
-        map<string, char> get_decode_map();
+        std::string get_encoded_text();
+        std::map<std::string, char> get_decode_map();
 
     private:
-        string encoded = "";
-        map<char, string> codes;
-        map<string, char> code_to_char;
-        map<char, int> frequences;
+        std::string encoded = "";
+        std::map<char, std::string> codes;
+        std::map<std::string, char> code_to_char;
+        std::map<char, int> frequences;
         HuffmanTree tree;
 
-        void count_frequences(string);
-        vector<Node*> to_nodes();
-        void dfs_encoding(Node*, string);
+        void count_frequences(std::string);
+        std::vector<Node*> to_nodes();
+        void dfs_encoding(Node*, std::string);
 };
 
 #endif

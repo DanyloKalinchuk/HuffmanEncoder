@@ -1,12 +1,11 @@
 #include "huffmanEncoder.hpp"
-#include <iostream>
 #include <algorithm>
 
-string decode_huffman(map<string, char> decoding_map, string incoded_string){
-    string current_code = "";
-    string decoded_string = "";
+std::string decode_huffman(std::map<std::string, char> decoding_map, std::string incoded_string){
+    std::string current_code = "";
+    std::string decoded_string = "";
     for (char character : incoded_string){
-        current_code += string(1, character);
+        current_code += std::string(1, character);
         if (decoding_map.find(current_code) != decoding_map.end()){
             decoded_string += decoding_map[current_code];
             current_code = "";
@@ -23,7 +22,7 @@ char Node::get_character() const {
     return this->character;
 }
 
-void HuffmanTree::nodes_to_tree(vector<Node*> nodes){
+void HuffmanTree::nodes_to_tree(std::vector<Node*> nodes){
     while (nodes.size() > 1){
         Node* left = nodes.back();
         nodes.pop_back();
@@ -43,34 +42,34 @@ void HuffmanTree::nodes_to_tree(vector<Node*> nodes){
     this->root = nodes[0]; 
 }
 
-string HuffmanEncoder::encode(string input){
+std::string HuffmanEncoder::encode(std::string input){
     this->count_frequences(input);
     this->tree.nodes_to_tree(this->to_nodes());
     this->dfs_encoding(this->tree.root, "");
 
-    vector<string> input_v;
+    std::vector<std::string> input_v;
     for(char ch : input){
-        input_v.push_back(string(1,ch));
+        input_v.push_back(std::string(1,ch));
     }
 
     for (int i = 0; i < input_v.size(); i++){
-        string code = this->codes[input_v[i][0]];
+        std::string code = this->codes[input_v[i][0]];
         input_v[i] = code;
     }
 
-    for (string code : input_v){
+    for (std::string code : input_v){
         this->encoded += code;
     }
             
     return this->encoded;
 }
 
-string HuffmanEncoder::get_original(){
-    string original = "";
+std::string HuffmanEncoder::get_original(){
+    std::string original = "";
 
-    string current_code = "";
+    std::string current_code = "";
     for (char character : this->encoded){
-        current_code += string(1, character);
+        current_code += std::string(1, character);
 
         if (this->code_to_char.find(current_code) != this->code_to_char.end()){
             original += this->code_to_char[current_code];
@@ -81,22 +80,22 @@ string HuffmanEncoder::get_original(){
     return original;
 }
 
-string HuffmanEncoder::get_encoded_text(){
+std::string HuffmanEncoder::get_encoded_text(){
     return this->encoded;
 }
 
-map<string, char> HuffmanEncoder::get_decode_map(){
+std::map<std::string, char> HuffmanEncoder::get_decode_map(){
     return this->code_to_char;
 }
 
-void HuffmanEncoder::count_frequences(string input){
+void HuffmanEncoder::count_frequences(std::string input){
     for (char ch : input){
         this->frequences[ch]++;
     }
 }
 
-vector<Node*> HuffmanEncoder::to_nodes(){
-    vector<Node*> nodes;
+std::vector<Node*> HuffmanEncoder::to_nodes(){
+    std::vector<Node*> nodes;
     for (auto character : this->frequences){
         Node* node = new Node(character.first, character.second, nullptr, nullptr);
         nodes.push_back(node);
@@ -109,7 +108,7 @@ vector<Node*> HuffmanEncoder::to_nodes(){
     return nodes;   
 }
 
-void HuffmanEncoder::dfs_encoding(Node* current_node, string current_code){
+void HuffmanEncoder::dfs_encoding(Node* current_node, std::string current_code){
     if (current_node->get_character() != '\0'){
         this->codes[current_node->get_character()] = current_code;
         this->code_to_char[current_code] = current_node->get_character();

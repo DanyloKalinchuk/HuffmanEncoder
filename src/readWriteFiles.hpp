@@ -3,20 +3,18 @@
 #include <string>
 #include <map>
 
-using namespace std;
-
 class ReadWriteFile{
     public:
-        void save_file(string, map<string, char>, string);
+        void save_file(std::string, std::map<std::string, char>, std::string);
 
-        void read_file(string);
+        void read_file(std::string);
 
-        map<string, char> get_decode_map();
+        std::map<std::string, char> get_decode_map();
 
-        string get_encoded_text();
+        std::string get_encoded_text();
 
         ReadWriteFile();
     private:
-        map<string, char> decode_map;
-        string encoded_text;
+        std::map<std::string, char> decode_map;
+        std::string encoded_text;
 };
