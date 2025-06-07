@@ -1,19 +1,16 @@
-#include <iostream>
 #include <string>
 #include <map>
 #include "readWriteFiles.hpp"
-
-using namespace std;
 
 ReadWriteFile::ReadWriteFile(){
     
 }
 
-void ReadWriteFile::save_file(string encoded_text, map<string, char> decode_map, string path){
+void ReadWriteFile::save_file(std::string encoded_text, std::map<std::string, char> decode_map, std::string path){
     path += "/encoded_data.bin";
-    ofstream out(path, ios::binary);
+    std::ofstream out(path, std::ios::binary);
     if (!out){
-        cerr << "Not a valid path" << "\n";
+        std::cerr << "Not a valid path" << "\n";
         return;
     }
 
@@ -31,23 +28,23 @@ void ReadWriteFile::save_file(string encoded_text, map<string, char> decode_map,
     }
 }
 
-void ReadWriteFile::read_file(string path){
-    ifstream in(path, ios::binary);
+void ReadWriteFile::read_file(std::string path){
+    std::ifstream in(path, std::ios::binary);
     if (!in) {
-        cerr << "Couldn't open file";
+        std::cerr << "Couldn't open file";
         return;
     }
 
     int size;
     in.read(reinterpret_cast<char*>(&size), sizeof(size));
-    this->encoded_text = string(size, '\0');
+    this->encoded_text = std::string(size, '\0');
     in.read(&this->encoded_text[0], size);
 
     in.read(reinterpret_cast<char*>(&size), sizeof(size));
     for(int i = 0; i < size; i++){
         int key_size;
         in.read(reinterpret_cast<char*>(&key_size), sizeof(key_size));
-        string key(key_size, '\0');
+        std::string key(key_size, '\0');
         in.read(&key[0], key_size);
 
         char value;
@@ -57,10 +54,10 @@ void ReadWriteFile::read_file(string path){
     }
 }
 
-map<string, char> ReadWriteFile::get_decode_map(){
+std::map<std::string, char> ReadWriteFile::get_decode_map(){
     return this->decode_map;
 }
 
-string ReadWriteFile::get_encoded_text(){
+std::string ReadWriteFile::get_encoded_text(){
     return this->encoded_text;
 }
