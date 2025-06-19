@@ -1,7 +1,6 @@
 #include "huffmanEncoder.hpp"
-#include <algorithm>
 
-std::string decode_huffman(std::map<std::string, char> decoding_map, std::string incoded_string){
+std::string decoder::decode_huffman(std::map<std::string, char> decoding_map, std::string incoded_string){
     std::string current_code = "";
     std::string decoded_string = "";
     for (char character : incoded_string){
@@ -12,34 +11,6 @@ std::string decode_huffman(std::map<std::string, char> decoding_map, std::string
         }
     }
     return decoded_string;
-}
-
-int Node::get_frequency() const {
-    return this->frequency;
-}
-
-char Node::get_character() const {
-    return this->character;
-}
-
-void HuffmanTree::nodes_to_tree(std::vector<Node*> nodes){
-    while (nodes.size() > 1){
-        Node* left = nodes.back();
-        nodes.pop_back();
-
-        Node* right = nodes.back();
-        nodes.pop_back();
-
-        Node* to_add = new Node('\0', (*right).get_frequency() + (*left).get_frequency(), left, right);
-
-        nodes.push_back(to_add);
-
-        sort(nodes.begin(), nodes.end(), [](Node* a, Node* b) {
-        return a->get_frequency() > b->get_frequency();
-        });
-    }
-
-    this->root = nodes[0]; 
 }
 
 std::string HuffmanEncoder::encode(std::string input){
@@ -94,13 +65,13 @@ void HuffmanEncoder::count_frequences(std::string input){
     }
 }
 
-std::vector<Node*> HuffmanEncoder::to_nodes(){
-    std::vector<Node*> nodes;
+std::vector<std::unique_ptr<Node>> HuffmanEncoder::to_nodes(){
+    std::vector<std::unique_ptr<Node>> nodes;
     for (auto character : this->frequences){
-        Node* node = new Node(character.first, character.second, nullptr, nullptr);
-        nodes.push_back(node);
+        std::unique_ptr<Node> node = std::make_unique<Node>(character.first, character.second, nullptr, nullptr);
+        nodes.push_back(std::move(node));
     }
-    sort(nodes.begin(), nodes.end(), [](Node* a, Node* b){
+    sort(nodes.begin(), nodes.end(), [](const std::unique_ptr<Node>& a, const std::unique_ptr<Node>& b){
         return a->get_frequency() > b->get_frequency();
     });
             
@@ -108,7 +79,7 @@ std::vector<Node*> HuffmanEncoder::to_nodes(){
     return nodes;   
 }
 
-void HuffmanEncoder::dfs_encoding(Node* current_node, std::string current_code){
+void HuffmanEncoder::dfs_encoding(const std::unique_ptr<Node>& current_node, std::string current_code){
     if (current_node->get_character() != '\0'){
         this->codes[current_node->get_character()] = current_code;
         this->code_to_char[current_code] = current_node->get_character();

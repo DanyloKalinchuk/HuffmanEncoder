@@ -1,6 +1,6 @@
 #include <iostream>
 #include <stdlib.h> 
-#include "huffmanEncoder.hpp"
+#include "huffman_encoder/huffmanEncoder.hpp"
 #include "readWriteFiles.hpp"
 
 using namespace std;
@@ -37,7 +37,7 @@ int main(){
             ReadWriteFile file_reader;
             file_reader.read_file(input);
 
-            input = decode_huffman(file_reader.get_decode_map(), file_reader.get_encoded_text());
+            input = decoder::decode_huffman(file_reader.get_decode_map(), file_reader.get_encoded_text());
             cout << "Decoded text: \n" << input;
         }
         else if (input == "3"){

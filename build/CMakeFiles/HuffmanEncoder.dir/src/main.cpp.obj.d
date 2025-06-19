@@ -139,12 +139,7 @@ CMakeFiles/HuffmanEncoder.dir/src/main.cpp.obj: \
  C:/msys64/ucrt64/include/c++/15.1.0/bits/ostream.tcc \
  C:/msys64/ucrt64/include/c++/15.1.0/istream \
  C:/msys64/ucrt64/include/c++/15.1.0/bits/istream.tcc \
- D:\c++\ projects\huffman\ coding\src\huffmanEncoder.hpp \
- C:/msys64/ucrt64/include/c++/15.1.0/vector \
- C:/msys64/ucrt64/include/c++/15.1.0/bits/stl_uninitialized.h \
- C:/msys64/ucrt64/include/c++/15.1.0/bits/stl_vector.h \
- C:/msys64/ucrt64/include/c++/15.1.0/bits/stl_bvector.h \
- C:/msys64/ucrt64/include/c++/15.1.0/bits/vector.tcc \
+ D:\c++\ projects\huffman\ coding\src\huffman_encoder/huffmanEncoder.hpp \
  C:/msys64/ucrt64/include/c++/15.1.0/map \
  C:/msys64/ucrt64/include/c++/15.1.0/bits/stl_tree.h \
  C:/msys64/ucrt64/include/c++/15.1.0/ext/aligned_buffer.h \
@@ -152,6 +147,34 @@ CMakeFiles/HuffmanEncoder.dir/src/main.cpp.obj: \
  C:/msys64/ucrt64/include/c++/15.1.0/bits/stl_map.h \
  C:/msys64/ucrt64/include/c++/15.1.0/bits/stl_multimap.h \
  C:/msys64/ucrt64/include/c++/15.1.0/bits/erase_if.h \
+ D:/c++\ projects/huffman\ coding/src/huffman_tree/huffman_tree.hpp \
+ D:/c++\ projects/huffman\ coding/src/node/node.hpp \
+ C:/msys64/ucrt64/include/c++/15.1.0/memory \
+ C:/msys64/ucrt64/include/c++/15.1.0/bits/stl_tempbuf.h \
+ C:/msys64/ucrt64/include/c++/15.1.0/bits/stl_uninitialized.h \
+ C:/msys64/ucrt64/include/c++/15.1.0/bits/stl_raw_storage_iter.h \
+ C:/msys64/ucrt64/include/c++/15.1.0/bits/align.h \
+ C:/msys64/ucrt64/include/c++/15.1.0/bits/unique_ptr.h \
+ C:/msys64/ucrt64/include/c++/15.1.0/bits/shared_ptr.h \
+ C:/msys64/ucrt64/include/c++/15.1.0/bits/shared_ptr_base.h \
+ C:/msys64/ucrt64/include/c++/15.1.0/bits/allocated_ptr.h \
+ C:/msys64/ucrt64/include/c++/15.1.0/ext/concurrence.h \
+ C:/msys64/ucrt64/include/c++/15.1.0/bits/shared_ptr_atomic.h \
+ C:/msys64/ucrt64/include/c++/15.1.0/bits/atomic_base.h \
+ C:/msys64/ucrt64/include/c++/15.1.0/bits/atomic_lockfree_defines.h \
+ C:/msys64/ucrt64/include/c++/15.1.0/backward/auto_ptr.h \
+ C:/msys64/ucrt64/include/c++/15.1.0/pstl/glue_memory_defs.h \
+ C:/msys64/ucrt64/include/c++/15.1.0/pstl/execution_defs.h \
+ C:/msys64/ucrt64/include/c++/15.1.0/vector \
+ C:/msys64/ucrt64/include/c++/15.1.0/bits/stl_vector.h \
+ C:/msys64/ucrt64/include/c++/15.1.0/bits/stl_bvector.h \
+ C:/msys64/ucrt64/include/c++/15.1.0/bits/vector.tcc \
+ C:/msys64/ucrt64/include/c++/15.1.0/algorithm \
+ C:/msys64/ucrt64/include/c++/15.1.0/bits/stl_algo.h \
+ C:/msys64/ucrt64/include/c++/15.1.0/bits/algorithmfwd.h \
+ C:/msys64/ucrt64/include/c++/15.1.0/bits/stl_heap.h \
+ C:/msys64/ucrt64/include/c++/15.1.0/bits/uniform_int_dist.h \
+ C:/msys64/ucrt64/include/c++/15.1.0/pstl/glue_algorithm_defs.h \
  D:\c++\ projects\huffman\ coding\src\readWriteFiles.hpp \
  C:/msys64/ucrt64/include/c++/15.1.0/fstream \
  C:/msys64/ucrt64/include/c++/15.1.0/bits/codecvt.h \
