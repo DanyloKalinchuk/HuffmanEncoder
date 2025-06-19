@@ -7,11 +7,11 @@ def encode(event=None):
     if text.strip() and output_path:
         sigle_line_text = " ".join(line.strip() for line in text.splitlines())
 
-        encoder = huffman.HuffmanEncoder()
-        encoder.encode(sigle_line_text)
-
-        file_reader = huffman.ReadWriteFiles()
-        file_reader.save_file(encoder.get_encoded_text(), encoder.get_decode_map(), output_path)
+        if option.get() == 1:
+            huffman.huffman_encode(sigle_line_text, output_path)
+        
+        elif option.get() == 2:
+            huffman.lz77_encode(sigle_line_text, output_path)
 
         lbl_state.configure(text="Output Saved!")
     else:
@@ -41,11 +41,12 @@ def get_path(event=None):
 def decode(event=None):
     filename = filedialog.askopenfilename(initialdir="/", title="Select a File", filetypes=(("Binary files", "*.bin*"),))
     if filename:
+        decoded_text = ""
+        if option.get() == 1:
+            decoded_text = huffman.huffman_decode(filename)
+        elif option.get() == 2:
+            decoded_text = huffman.lz77_decode(filename)
 
-        file_reader = huffman.ReadWriteFiles()
-        file_reader.read_file(filename)
-        decoded_text = huffman.decode_huffman(file_reader.get_decode_map(), file_reader.get_encoded_text())
-            
         txt_box_decoded.delete('1.0', 'end')
         txt_box_decoded.insert('1.0', decoded_text)
 
@@ -53,7 +54,7 @@ output_path = ""
 
 root = tk.Tk()
 root.title("Huffman Encoder")
-root.geometry("800x675")
+root.geometry("850x675")
 
 root.columnconfigure(0, weight=5)
 root.columnconfigure(1, weight=1)
@@ -102,5 +103,20 @@ lbl_decoding.grid(row=2, column=0, sticky="new")
 txt_box_decoded = tk.Text(frame_input, font=('System 15'), height=12)
 txt_box_decoded.grid(row=3, column=0, sticky="new")
 
+#radio buttons
+#frame_radio_btns = tk.Frame(frame_input)
+#frame_radio_btns.grid(row=3, column=1, sticky="new")
+
+lbl_radio = tk.Label(frame_btns, text="Choose encoding method")
+lbl_radio.grid(row=5, column=0, sticky="new")
+
+option = tk.IntVar()
+option.set(1)
+
+radio_huffman = tk.Radiobutton(frame_btns, text="Huffman Coding", variable=option, value=1)
+radio_huffman.grid(row=6, column=0, sticky="new")
+
+radio_lz77 = tk.Radiobutton(frame_btns, text="LZ77", variable=option, value=2)
+radio_lz77.grid(row=7, column=0, sticky="new")
 
 root.mainloop()

@@ -85,51 +85,83 @@ CMakeFiles/HuffmanEncoder.dir/src/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/HuffmanEncoder.dir/src/main.cpp.s"
 	C:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "D:\c++ projects\huffman coding\src\main.cpp" -o CMakeFiles\HuffmanEncoder.dir\src\main.cpp.s
 
-CMakeFiles/HuffmanEncoder.dir/src/huffmanEncoder.cpp.obj: CMakeFiles/HuffmanEncoder.dir/flags.make
-CMakeFiles/HuffmanEncoder.dir/src/huffmanEncoder.cpp.obj: D:/c++\ projects/huffman\ coding/src/huffmanEncoder.cpp
-CMakeFiles/HuffmanEncoder.dir/src/huffmanEncoder.cpp.obj: CMakeFiles/HuffmanEncoder.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="D:\c++ projects\huffman coding\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/HuffmanEncoder.dir/src/huffmanEncoder.cpp.obj"
-	C:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/HuffmanEncoder.dir/src/huffmanEncoder.cpp.obj -MF CMakeFiles\HuffmanEncoder.dir\src\huffmanEncoder.cpp.obj.d -o CMakeFiles\HuffmanEncoder.dir\src\huffmanEncoder.cpp.obj -c "D:\c++ projects\huffman coding\src\huffmanEncoder.cpp"
+CMakeFiles/HuffmanEncoder.dir/src/huffman_encoder/huffmanEncoder.cpp.obj: CMakeFiles/HuffmanEncoder.dir/flags.make
+CMakeFiles/HuffmanEncoder.dir/src/huffman_encoder/huffmanEncoder.cpp.obj: D:/c++\ projects/huffman\ coding/src/huffman_encoder/huffmanEncoder.cpp
+CMakeFiles/HuffmanEncoder.dir/src/huffman_encoder/huffmanEncoder.cpp.obj: CMakeFiles/HuffmanEncoder.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="D:\c++ projects\huffman coding\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/HuffmanEncoder.dir/src/huffman_encoder/huffmanEncoder.cpp.obj"
+	C:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/HuffmanEncoder.dir/src/huffman_encoder/huffmanEncoder.cpp.obj -MF CMakeFiles\HuffmanEncoder.dir\src\huffman_encoder\huffmanEncoder.cpp.obj.d -o CMakeFiles\HuffmanEncoder.dir\src\huffman_encoder\huffmanEncoder.cpp.obj -c "D:\c++ projects\huffman coding\src\huffman_encoder\huffmanEncoder.cpp"
 
-CMakeFiles/HuffmanEncoder.dir/src/huffmanEncoder.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/HuffmanEncoder.dir/src/huffmanEncoder.cpp.i"
-	C:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "D:\c++ projects\huffman coding\src\huffmanEncoder.cpp" > CMakeFiles\HuffmanEncoder.dir\src\huffmanEncoder.cpp.i
+CMakeFiles/HuffmanEncoder.dir/src/huffman_encoder/huffmanEncoder.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/HuffmanEncoder.dir/src/huffman_encoder/huffmanEncoder.cpp.i"
+	C:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "D:\c++ projects\huffman coding\src\huffman_encoder\huffmanEncoder.cpp" > CMakeFiles\HuffmanEncoder.dir\src\huffman_encoder\huffmanEncoder.cpp.i
 
-CMakeFiles/HuffmanEncoder.dir/src/huffmanEncoder.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/HuffmanEncoder.dir/src/huffmanEncoder.cpp.s"
-	C:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "D:\c++ projects\huffman coding\src\huffmanEncoder.cpp" -o CMakeFiles\HuffmanEncoder.dir\src\huffmanEncoder.cpp.s
+CMakeFiles/HuffmanEncoder.dir/src/huffman_encoder/huffmanEncoder.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/HuffmanEncoder.dir/src/huffman_encoder/huffmanEncoder.cpp.s"
+	C:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "D:\c++ projects\huffman coding\src\huffman_encoder\huffmanEncoder.cpp" -o CMakeFiles\HuffmanEncoder.dir\src\huffman_encoder\huffmanEncoder.cpp.s
 
-CMakeFiles/HuffmanEncoder.dir/src/readWriteFiles.cpp.obj: CMakeFiles/HuffmanEncoder.dir/flags.make
-CMakeFiles/HuffmanEncoder.dir/src/readWriteFiles.cpp.obj: D:/c++\ projects/huffman\ coding/src/readWriteFiles.cpp
-CMakeFiles/HuffmanEncoder.dir/src/readWriteFiles.cpp.obj: CMakeFiles/HuffmanEncoder.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="D:\c++ projects\huffman coding\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/HuffmanEncoder.dir/src/readWriteFiles.cpp.obj"
-	C:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/HuffmanEncoder.dir/src/readWriteFiles.cpp.obj -MF CMakeFiles\HuffmanEncoder.dir\src\readWriteFiles.cpp.obj.d -o CMakeFiles\HuffmanEncoder.dir\src\readWriteFiles.cpp.obj -c "D:\c++ projects\huffman coding\src\readWriteFiles.cpp"
+CMakeFiles/HuffmanEncoder.dir/src/huffman_tree/huffman_tree.cpp.obj: CMakeFiles/HuffmanEncoder.dir/flags.make
+CMakeFiles/HuffmanEncoder.dir/src/huffman_tree/huffman_tree.cpp.obj: D:/c++\ projects/huffman\ coding/src/huffman_tree/huffman_tree.cpp
+CMakeFiles/HuffmanEncoder.dir/src/huffman_tree/huffman_tree.cpp.obj: CMakeFiles/HuffmanEncoder.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="D:\c++ projects\huffman coding\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/HuffmanEncoder.dir/src/huffman_tree/huffman_tree.cpp.obj"
+	C:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/HuffmanEncoder.dir/src/huffman_tree/huffman_tree.cpp.obj -MF CMakeFiles\HuffmanEncoder.dir\src\huffman_tree\huffman_tree.cpp.obj.d -o CMakeFiles\HuffmanEncoder.dir\src\huffman_tree\huffman_tree.cpp.obj -c "D:\c++ projects\huffman coding\src\huffman_tree\huffman_tree.cpp"
 
-CMakeFiles/HuffmanEncoder.dir/src/readWriteFiles.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/HuffmanEncoder.dir/src/readWriteFiles.cpp.i"
-	C:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "D:\c++ projects\huffman coding\src\readWriteFiles.cpp" > CMakeFiles\HuffmanEncoder.dir\src\readWriteFiles.cpp.i
+CMakeFiles/HuffmanEncoder.dir/src/huffman_tree/huffman_tree.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/HuffmanEncoder.dir/src/huffman_tree/huffman_tree.cpp.i"
+	C:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "D:\c++ projects\huffman coding\src\huffman_tree\huffman_tree.cpp" > CMakeFiles\HuffmanEncoder.dir\src\huffman_tree\huffman_tree.cpp.i
 
-CMakeFiles/HuffmanEncoder.dir/src/readWriteFiles.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/HuffmanEncoder.dir/src/readWriteFiles.cpp.s"
-	C:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "D:\c++ projects\huffman coding\src\readWriteFiles.cpp" -o CMakeFiles\HuffmanEncoder.dir\src\readWriteFiles.cpp.s
+CMakeFiles/HuffmanEncoder.dir/src/huffman_tree/huffman_tree.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/HuffmanEncoder.dir/src/huffman_tree/huffman_tree.cpp.s"
+	C:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "D:\c++ projects\huffman coding\src\huffman_tree\huffman_tree.cpp" -o CMakeFiles\HuffmanEncoder.dir\src\huffman_tree\huffman_tree.cpp.s
+
+CMakeFiles/HuffmanEncoder.dir/src/node/node.cpp.obj: CMakeFiles/HuffmanEncoder.dir/flags.make
+CMakeFiles/HuffmanEncoder.dir/src/node/node.cpp.obj: D:/c++\ projects/huffman\ coding/src/node/node.cpp
+CMakeFiles/HuffmanEncoder.dir/src/node/node.cpp.obj: CMakeFiles/HuffmanEncoder.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="D:\c++ projects\huffman coding\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/HuffmanEncoder.dir/src/node/node.cpp.obj"
+	C:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/HuffmanEncoder.dir/src/node/node.cpp.obj -MF CMakeFiles\HuffmanEncoder.dir\src\node\node.cpp.obj.d -o CMakeFiles\HuffmanEncoder.dir\src\node\node.cpp.obj -c "D:\c++ projects\huffman coding\src\node\node.cpp"
+
+CMakeFiles/HuffmanEncoder.dir/src/node/node.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/HuffmanEncoder.dir/src/node/node.cpp.i"
+	C:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "D:\c++ projects\huffman coding\src\node\node.cpp" > CMakeFiles\HuffmanEncoder.dir\src\node\node.cpp.i
+
+CMakeFiles/HuffmanEncoder.dir/src/node/node.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/HuffmanEncoder.dir/src/node/node.cpp.s"
+	C:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "D:\c++ projects\huffman coding\src\node\node.cpp" -o CMakeFiles\HuffmanEncoder.dir\src\node\node.cpp.s
+
+CMakeFiles/HuffmanEncoder.dir/src/file_handling/readWriteFiles.cpp.obj: CMakeFiles/HuffmanEncoder.dir/flags.make
+CMakeFiles/HuffmanEncoder.dir/src/file_handling/readWriteFiles.cpp.obj: D:/c++\ projects/huffman\ coding/src/file_handling/readWriteFiles.cpp
+CMakeFiles/HuffmanEncoder.dir/src/file_handling/readWriteFiles.cpp.obj: CMakeFiles/HuffmanEncoder.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="D:\c++ projects\huffman coding\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/HuffmanEncoder.dir/src/file_handling/readWriteFiles.cpp.obj"
+	C:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/HuffmanEncoder.dir/src/file_handling/readWriteFiles.cpp.obj -MF CMakeFiles\HuffmanEncoder.dir\src\file_handling\readWriteFiles.cpp.obj.d -o CMakeFiles\HuffmanEncoder.dir\src\file_handling\readWriteFiles.cpp.obj -c "D:\c++ projects\huffman coding\src\file_handling\readWriteFiles.cpp"
+
+CMakeFiles/HuffmanEncoder.dir/src/file_handling/readWriteFiles.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/HuffmanEncoder.dir/src/file_handling/readWriteFiles.cpp.i"
+	C:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "D:\c++ projects\huffman coding\src\file_handling\readWriteFiles.cpp" > CMakeFiles\HuffmanEncoder.dir\src\file_handling\readWriteFiles.cpp.i
+
+CMakeFiles/HuffmanEncoder.dir/src/file_handling/readWriteFiles.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/HuffmanEncoder.dir/src/file_handling/readWriteFiles.cpp.s"
+	C:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "D:\c++ projects\huffman coding\src\file_handling\readWriteFiles.cpp" -o CMakeFiles\HuffmanEncoder.dir\src\file_handling\readWriteFiles.cpp.s
 
 # Object files for target HuffmanEncoder
 HuffmanEncoder_OBJECTS = \
 "CMakeFiles/HuffmanEncoder.dir/src/main.cpp.obj" \
-"CMakeFiles/HuffmanEncoder.dir/src/huffmanEncoder.cpp.obj" \
-"CMakeFiles/HuffmanEncoder.dir/src/readWriteFiles.cpp.obj"
+"CMakeFiles/HuffmanEncoder.dir/src/huffman_encoder/huffmanEncoder.cpp.obj" \
+"CMakeFiles/HuffmanEncoder.dir/src/huffman_tree/huffman_tree.cpp.obj" \
+"CMakeFiles/HuffmanEncoder.dir/src/node/node.cpp.obj" \
+"CMakeFiles/HuffmanEncoder.dir/src/file_handling/readWriteFiles.cpp.obj"
 
 # External object files for target HuffmanEncoder
 HuffmanEncoder_EXTERNAL_OBJECTS =
 
 HuffmanEncoder.exe: CMakeFiles/HuffmanEncoder.dir/src/main.cpp.obj
-HuffmanEncoder.exe: CMakeFiles/HuffmanEncoder.dir/src/huffmanEncoder.cpp.obj
-HuffmanEncoder.exe: CMakeFiles/HuffmanEncoder.dir/src/readWriteFiles.cpp.obj
+HuffmanEncoder.exe: CMakeFiles/HuffmanEncoder.dir/src/huffman_encoder/huffmanEncoder.cpp.obj
+HuffmanEncoder.exe: CMakeFiles/HuffmanEncoder.dir/src/huffman_tree/huffman_tree.cpp.obj
+HuffmanEncoder.exe: CMakeFiles/HuffmanEncoder.dir/src/node/node.cpp.obj
+HuffmanEncoder.exe: CMakeFiles/HuffmanEncoder.dir/src/file_handling/readWriteFiles.cpp.obj
 HuffmanEncoder.exe: CMakeFiles/HuffmanEncoder.dir/build.make
 HuffmanEncoder.exe: CMakeFiles/HuffmanEncoder.dir/linkLibs.rsp
 HuffmanEncoder.exe: CMakeFiles/HuffmanEncoder.dir/objects1.rsp
 HuffmanEncoder.exe: CMakeFiles/HuffmanEncoder.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir="D:\c++ projects\huffman coding\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable HuffmanEncoder.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir="D:\c++ projects\huffman coding\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX executable HuffmanEncoder.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\HuffmanEncoder.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
