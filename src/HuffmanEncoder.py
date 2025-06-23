@@ -7,11 +7,7 @@ def encode(event=None):
     if text.strip() and output_path:
         sigle_line_text = " ".join(line.strip() for line in text.splitlines())
 
-        if option.get() == 1:
-            huffman.huffman_encode(sigle_line_text, output_path)
-        
-        elif option.get() == 2:
-            huffman.lz77_encode(sigle_line_text, output_path)
+        huffman.encode(sigle_line_text, output_path, option.get())
 
         lbl_state.configure(text="Output Saved!")
     else:
@@ -41,11 +37,7 @@ def get_path(event=None):
 def decode(event=None):
     filename = filedialog.askopenfilename(initialdir="/", title="Select a File", filetypes=(("Binary files", "*.bin*"),))
     if filename:
-        decoded_text = ""
-        if option.get() == 1:
-            decoded_text = huffman.huffman_decode(filename)
-        elif option.get() == 2:
-            decoded_text = huffman.lz77_decode(filename)
+        decoded_text = huffman.decode(filename)
 
         txt_box_decoded.delete('1.0', 'end')
         txt_box_decoded.insert('1.0', decoded_text)
