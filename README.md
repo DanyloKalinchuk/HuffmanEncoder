@@ -1,12 +1,16 @@
 # HuffmanEncoder
-A C++ and Python-based application that encodes text using Huffman coding and decodes it.
+A C++ and Python-based application that encodes text using chosen coding method and decodes it.
 
 ## Description
 The basic functionality of the application, encoding/decoding text and handling input/output, is built in C++. Python was used for the user interface.
 
+### Available coding methods
+- **Huffman_Coding**;
+- **LZ77**.
+
 There are 2 versions of the app: 
 - **HuffmanEncoder:** the main version featuring Python-based user interface.
-- **HuffmanEncoder_terminal:** terminal version that uses C++ only.
+- **HuffmanEncoder_terminal:** terminal version that uses C++ only. **For now only suitable for Huffman Coding.**
 
 ## Usage
 To open the application, run one of the following files `HuffmanEncoder.exe` or `HuffmanEncoder_terminal.exe` according to the version needed.
