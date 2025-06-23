@@ -15,7 +15,7 @@ class ReadWriteFile{
 
         void save_file(std::string, std::map<std::string, char>, std::string);
 
-        void read_file(std::string);
+        void read_file(std::ifstream&);
 
         std::map<std::string, char> get_decode_map();
 
@@ -33,6 +33,6 @@ class ReadWriteLZ77{
     std::vector<std::unique_ptr<Pointer>> pointers;
 
     void save_file(const std::vector<std::unique_ptr<Pointer>>&, std::string);
-    void read_file(std::string);
+    void read_file(std::ifstream&);
 
 };

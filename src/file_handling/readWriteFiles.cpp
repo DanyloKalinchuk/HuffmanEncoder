@@ -13,6 +13,9 @@ void ReadWriteFile::save_file(std::string encoded_text, std::map<std::string, ch
         return;
     }
 
+    char type = '1';
+    out.write(reinterpret_cast<char*>(&type), sizeof(type));
+
     int size = encoded_text.length();
     out.write(reinterpret_cast<const char*>(&size), sizeof(size));
     out.write(encoded_text.c_str(), size);
@@ -29,14 +32,7 @@ void ReadWriteFile::save_file(std::string encoded_text, std::map<std::string, ch
     out.close();
 }
 
-void ReadWriteFile::read_file(std::string path){
-    std::ifstream in(path, std::ios::binary);
-    if (!in) {
-        std::cerr << "Couldn't open file \n";
-        in.close();
-        return;
-    }
-
+void ReadWriteFile::read_file(std::ifstream& in){
     int size;
     in.read(reinterpret_cast<char*>(&size), sizeof(size));
     this->encoded_text = std::string(size, '\0');
@@ -76,6 +72,9 @@ void ReadWriteLZ77::save_file(const std::vector<std::unique_ptr<Pointer>>& encod
         return;
     }
 
+    char type = '2';
+    out.write(reinterpret_cast<char*>(&type), sizeof(type));
+
     size_t encoded_size = encoded.size();
     out.write(reinterpret_cast<const char*>(&encoded_size), sizeof(encoded_size));
     for (const auto& ptr : encoded){
@@ -97,14 +96,7 @@ void ReadWriteLZ77::save_file(const std::vector<std::unique_ptr<Pointer>>& encod
     out.close();
 }
 
-void ReadWriteLZ77::read_file(std::string path){
-    std::ifstream in(path, std::ios::binary);
-    if (!in){
-        std::cerr << "Couldn't open file \n";
-        in.close();
-        return;
-    }
-
+void ReadWriteLZ77::read_file(std::ifstream& in){
     size_t pointers_size ;
     in.read(reinterpret_cast<char*>(&pointers_size), sizeof(pointers_size));
     for (int i = 0; i < pointers_size; i++){
