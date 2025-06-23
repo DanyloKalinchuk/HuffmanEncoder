@@ -1,8 +1,0 @@
-setup.py
-huffman.egg-info/PKG-INFO
-huffman.egg-info/SOURCES.txt
-huffman.egg-info/dependency_links.txt
-huffman.egg-info/top_level.txt
-src/bindings.cpp
-src/huffmanEncoder.cpp
-src/readWriteFiles.cpp
