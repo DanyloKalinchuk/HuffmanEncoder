@@ -78,17 +78,13 @@ void ReadWriteLZ77::save_file(const std::vector<std::unique_ptr<Pointer>>& encod
     size_t encoded_size = encoded.size();
     out.write(reinterpret_cast<const char*>(&encoded_size), sizeof(encoded_size));
     for (const auto& ptr : encoded){
-        const std::string offset = std::to_string(ptr->get_offset());
-        const std::string length = std::to_string(ptr->get_length());
+        const int offset = ptr->get_offset();
+        const int length = ptr->get_length();
         const char character = ptr->get_character();
 
-        size_t size = offset.size();
-        out.write(reinterpret_cast<const char*>(&size), sizeof(size));
-        out.write(offset.c_str(), offset.size());
+        out.write(reinterpret_cast<const char*>(&offset), sizeof(offset));
 
-        size = length.size();
-        out.write(reinterpret_cast<const char*>(&size), sizeof(size));
-        out.write(length.c_str(), length.size());
+        out.write(reinterpret_cast<const char*>(&length), sizeof(length));
 
         out.write(reinterpret_cast<const char*>(&character), sizeof(character));
     }
@@ -100,17 +96,11 @@ void ReadWriteLZ77::read_file(std::ifstream& in){
     size_t pointers_size ;
     in.read(reinterpret_cast<char*>(&pointers_size), sizeof(pointers_size));
     for (int i = 0; i < pointers_size; i++){
-        size_t size;
+        int offset;
+        in.read(reinterpret_cast<char*>(&offset), sizeof(offset));
 
-        in.read(reinterpret_cast<char*>(&size), sizeof(size));
-        std::string offset_str(size, '\0');
-        in.read(&offset_str[0], size);
-        int offset = std::stoi(offset_str);
-
-        in.read(reinterpret_cast<char*>(&size), sizeof(size));
-        std::string length_str(size, '\0');
-        in.read(&length_str[0], size);
-        int length = std::stoi(length_str);
+        int length;
+        in.read(reinterpret_cast<char*>(&length), sizeof(length));
         
         char character;
         in.read(reinterpret_cast<char*>(&character), sizeof(character));
