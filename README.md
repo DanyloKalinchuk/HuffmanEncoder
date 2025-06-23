@@ -5,8 +5,8 @@ A C++ and Python-based application that encodes text using chosen coding method 
 The basic functionality of the application, encoding/decoding text and handling input/output, is built in C++. Python was used for the user interface.
 
 ### Available coding methods
-- **Huffman_Coding**;
-- **LZ77**.
+- **Huffman_Coding**
+- **LZ77**
 
 There are 2 versions of the app: 
 - **HuffmanEncoder:** the main version featuring Python-based user interface.
