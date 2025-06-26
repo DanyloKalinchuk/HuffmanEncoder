@@ -1,13 +1,13 @@
 #include "pointer.hpp"
 
-Pointer::Pointer(int offset, int length, char character)
+Pointer::Pointer(const unsigned int& offset, const unsigned int& length, const char& character)
     : offset(offset), length(length), character(character) {}
 
-int Pointer::get_offset() const{
+unsigned int Pointer::get_offset() const{
     return this->offset;
 }
 
-int Pointer::get_length() const{
+unsigned int Pointer::get_length() const{
     return this->length;
 }
 
