@@ -2,40 +2,42 @@
 
 std::vector<std::unique_ptr<Pointer>> lz77::encode(const std::string input){
     std::vector<std::unique_ptr<Pointer>> output;
-    output.push_back(std::make_unique<Pointer>(0, 0, input[0]));
 
-    int window = input.size() / 3;
-    int cp = 1;
+    int window = std::min(static_cast<int>(input.size() / 3), 4095);
+    int cp = 0;
     while (cp < input.size()){
-        int len = 0;
-        int offset = 0;
-        int search = std::max(0, cp - window);
-        int buffer = cp;
-
-        while (search < cp && buffer < cp + window){
-            if (input[search] == input[buffer]){
-                if (offset == 0){
-                    offset = buffer - search;
+        int best_length = 0;
+        int best_offset = 0;
+        
+        int start = std::max(0, cp - window);
+        for (int i = start; i < cp; i++){
+            int length = 0;
+            while (cp + length < input.size()){
+                if (input[i + length] == input[cp + length]){
+                    length++;
+                }else{
+                    break;
                 }
-                len++;
-                buffer++;
-            }
-            else if (len > 0){
-                break;
+                if (i+length >= cp || length >= 15){
+                    break;
+                }
             }
 
-            search++;
+            if(length > best_length){
+                best_length = length;
+                best_offset = cp - i;
+            }
         }
 
-        if (cp + len < input.size()){
-            output.push_back(std::make_unique<Pointer>(offset, len, input[cp + len]));
+        char character;
+        if (cp + best_length < input.size()){
+            character = input[cp + best_length];
         }else{
-            output.push_back(std::make_unique<Pointer>(offset, len, '\0'));
+            character = '\0';
         }
 
-        cp += output.back()->get_length() + 1;
-
-
+        output.push_back(std::move(std::make_unique<Pointer>(best_offset, best_length, character)));
+        cp += best_length + 1;
     }
     
     return output;

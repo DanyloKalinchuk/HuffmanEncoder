@@ -1,7 +1,8 @@
 #include <iostream>
 #include <stdlib.h> 
 #include "huffman_encoder/huffmanEncoder.hpp"
-#include "readWriteFiles.hpp"
+#include "lz77/lz77.hpp"
+#include "file_handling/rw_encoding.hpp"
 
 using namespace std;
 
@@ -16,28 +17,19 @@ int main(){
         if (input == "1"){
             cout << "Print text for encoding \n";
             cin >> input;
-
-            system ("CLS");
-            cin >> input;
-
-            HuffmanEncoder encoder;
-            encoder.encode(input);
+            string text = input;
 
             cout << "Provide path for the output \n";
             cin >> input;
 
-            ReadWriteFile file_reader;
-            file_reader.save_file(encoder.get_encoded_text(), encoder.get_decode_map(), input);
+            en_decoding::encode(text, input, 2);
         }
 
         else if (input == "2"){
             cout << "Provide path to a .bin file with an encoded text \n";
             cin >> input;
 
-            ReadWriteFile file_reader;
-            file_reader.read_file(input);
-
-            input = decoder::decode_huffman(file_reader.get_decode_map(), file_reader.get_encoded_text());
+            input = en_decoding::decode(input);
             cout << "Decoded text: \n" << input;
         }
         else if (input == "3"){
